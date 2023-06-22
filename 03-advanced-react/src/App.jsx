@@ -1,9 +1,9 @@
-import FetchData from "./tutorial/02-useEffect/starter/04-fetch-data";
+import CleanupFunction from "./tutorial/02-useEffect/starter/05-cleanup-function";
 function App() {
   return (
     <div className="container">
       <h2>Advanced React</h2>
-      <FetchData />
+      <CleanupFunction />
     </div>
   );
 }
