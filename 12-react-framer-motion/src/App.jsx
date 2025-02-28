@@ -1,5 +1,5 @@
-import { useState } from 'react';
-
+import { useState } from "react";
+import { motion } from "framer-motion";
 function App() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
@@ -7,7 +7,16 @@ function App() {
 
   return (
     <div id="demo">
-      <div id="box" />
+      {/* motion must be add to the element that you want to animate */}
+      {/* animate prop is used to animate the element, add the css element you want to animate */}
+      {/* x is the state that we want to animate */}
+      {/* transition prop is used to set the configuration of the animation */}
+      {/* sprint here means that the animation will be a spring animation means animation with physics,so bounce will work, if set tween then bound won't work, as tween is simply transition */}
+      <motion.div
+        id="box"
+        animate={{ x: x, y: y, rotate: rotate }}
+        transition={{ duration: 0.5, type: "spring", bounce: 0 }}
+      />
 
       <div id="inputs">
         <p>
